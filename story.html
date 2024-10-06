@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        /* Styling the form */
+        /* body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        } */
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin-left: 20vw;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Styling the dropdown */
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f9;
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            appearance: none;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNjY2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDE2Yy0uMjYzIDAtLjUyNi0uMTAzLS43MDcuMjk3TDcuMjQ5IDExLjI5Yy0uMzgtLjM4LS4xMTEtMS4wMy40Ny0xLjAzaDguNTZjLjU4IDAgLjg1OC42NS40NzQgMS4wM2wtNC4wNzEgNC43MDFDLjUyNiAxNi4xMDMgMTEuNzM3IDE2IDEyIDE2eiIvPjwvc3ZnPg==');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 15px;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Styling the submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling the result paragraph */
+        #result {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <div id="yellow1"></div>
+        <div id="yellow2"></div>
+        <video autoplay loop muted src="./nasa.mp4"></video>
+        <h1>
+            CREATIVE PROFESSIONALS<br><em>DEDICATED</em> TO CULTURAL<br>ADVANCEMENT THROUGH<br><em>STRATEGY</em> AND
+            <em>DESIGN</em>
+        </h1>
+    </div>
+
+    <div id="main">
+        <div id="page1">
+            <div id="nav">
+                <div class="logo1">
+                    <img src="./logo1.png" alt="">
+                </div>
+                <div class="bar">
+                    <a href="">Home</a><span>|</span><a href="#about">About</a><span>|</span><a
+                        href="#stories">Stories</a><span>|</span><a href="#contact">Contact</a>
+                </div>
+                <div class="logo2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFrsphBvF_U2JGtwT9eGll2--UyP0Bepcqw&s"
+                        alt="">
+                </div>
+            </div>
+            <!-- <h1>
+                CREATIVE PROFESSIONALS<br><em>DEDICATED</em> TO EMPOWER<br>CLIMATE ACTION<br><em>THROUGH</em> SCIENTIFIC
+                <em>STORYTELLING</em>
+            </h1> -->
+        </div>
+
+        <form>
+            <h2>Select Region to Explore:</h2>
+            <!-- <label for="fruits">Choose a fruit:</label> -->
+            <select id="fruits" name="fruits" onchange="displaySelection()">
+                <option value="" disabled selected>Select a Region</option>
+                <option value="India">India</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Japan">Japan</option>
+                <option value="China">China</option>
+            </select>
+    
+            <input type="submit" value="Submit">
+            <p id="result"></p>
+        </form>    
+
+        <a href="https://www.google.com/maps/d/u/0/viewer?mid=1lTBoOSrONcx83hg-a3swYpnCvyc&femb=1&ll=27.673097837847834%2C77.53783879818096&z=6" class="stylish-button">Climate Stories Map</a>
+        
+    </div>    
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>
+</html>
